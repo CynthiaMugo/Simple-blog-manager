@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Manager</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Food Blog Manager</h1>
+    <section class="container" id="container">
+        <aside class="sidebar">
+            <div class="blog-titles">
+                <h2>Blog Posts</h2>
+                <h3 id="num-blogs">0 posts</h3>
+            </div>
+            <div class="add-blog">
+                <h2>Add new post</h2>
+                <form id="add-post">
+                    <input type="text" id="input-title" placeholder="Title"><br><br>
+                    <input type="text" id="input-author" placeholder="Author name"><br><br>
+                    <input type="text" id="input-image" placeholder="Image URL"><br><br>
+                    <textarea name="content" id="input-content" placeholder="Post Content"></textarea><br><br>
+                    <button id="create-post">Create Post</button>
+                </form>
+            </div>
+        </aside>
+        <main id="display-blog">
+            <h2>Display blogs</h2>
+        </main>
+    </section>
+</body>
+</html>
