@@ -27,7 +27,7 @@ h1 {
     background-color: #f4f4f8;
     padding: 20px;
     border-radius: 10px;
-    min-width: 500px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -87,4 +87,6 @@ textarea {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    min-width: 800px;
+    background-color: green;
 }
