@@ -1,9 +1,9 @@
-/* * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-} */
+}
 body {
     background-color: #fefefe;
     padding: 20px;
@@ -18,9 +18,10 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    max-width: 1500px;
+    gap: 100px;
+    max-width: 1800px;
     margin: 0 auto;
+    background-color: aqua;
 }
 
 .sidebar {
@@ -31,7 +32,7 @@ h1 {
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 35px;
     padding: 20px;
 }
 .blog-titles {
@@ -88,6 +89,6 @@ textarea {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    max-width: 900px;
+    max-width: 1200px;
     background-color: green;
 }

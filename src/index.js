@@ -15,6 +15,10 @@
     .then(data => {
         posts = data;
         displayTitles(posts);
+        // See the details for the first post as soon as the page loads 
+        if (posts.length > 0) {
+            handlePostClick(posts[0]);
+        } 
     })
     .catch(error => {
         console.error("Error fetching posts:", error);
