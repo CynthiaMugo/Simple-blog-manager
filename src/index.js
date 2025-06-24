@@ -47,10 +47,10 @@ function handlePostClick(posts) {
     postElement.classList.add("post");
 
     postElement.innerHTML = `
-        <img src="${posts.image}" alt="${posts.title}" class="post-image">
         <h2>${posts.title}</h2>
-        <p>${posts.content}</p>
         <p><strong>Author:</strong> ${posts.author}</p>
+        <img src="${posts.image}" alt="${posts.title}" class="post-image">
+        <p>${posts.content}</p>
     `;
 
     postContainer.appendChild(postElement);
