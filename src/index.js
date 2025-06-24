@@ -12,7 +12,7 @@
     });
 }
 
-// diplay all the titles
+// display all the titles
 function displayTitles(posts) {
     const titleContainer = document.getElementById("title-list");
     // console.log(titleContainer);
@@ -24,7 +24,28 @@ function displayTitles(posts) {
         titleLi.textContent = posts.title;
 
         titleContainer.appendChild(titleLi);
+
+        titleLi.addEventListener("click", () => handlePostClick(posts));
     })
+}
+// Click on a post title from the ul and see its details
+
+function handlePostClick(posts) {
+    const postContainer = document.getElementById("display-blog");
+    postContainer.innerHTML = ""; // Clear previous content
+
+    const postElement = document.createElement("div");
+    postElement.classList.add("post");
+    postElement.id = `post-${posts.id}`;
+
+    postElement.innerHTML = `
+        <img src="${posts.image}" alt="${posts.title}" class="post-image">
+        <h2>${posts.title}</h2>
+        <p>${posts.content}</p>
+        <p><strong>Author:</strong> ${posts.author}</p>
+    `;
+
+    postContainer.appendChild(postElement);
 }
 
 displayPosts();
