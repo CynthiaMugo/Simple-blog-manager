@@ -19,6 +19,9 @@
         if (posts.length > 0) {
             handlePostClick(posts[0]);
         } 
+        // Update the number of posts displayed
+        updatePostCount(posts);
+
     })
     .catch(error => {
         console.error("Error fetching posts:", error);
@@ -95,4 +98,11 @@ function addNewPostListener() {
 });
         
     })
+}
+
+// Update the number of posts displayed
+function updatePostCount(posts) {
+    const postCountElement = document.getElementById("num-blogs");
+    console.log(postCountElement);
+    postCountElement.textContent = `${posts.length} posts`;
 }
