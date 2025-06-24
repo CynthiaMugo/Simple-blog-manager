@@ -14,7 +14,7 @@
 
 // display all the titles
 function displayTitles(posts) {
-    const titleContainer = document.getElementById("title-list");
+    const titleContainer = document.getElementById("post-list");
     // console.log(titleContainer);
     titleContainer.innerHTML = ""; // Clear previous content
 
@@ -28,15 +28,14 @@ function displayTitles(posts) {
         titleLi.addEventListener("click", () => handlePostClick(posts));
     })
 }
-// Click on a post title from the ul and see its details
 
+// Click on a post title from the ul and see its details
 function handlePostClick(posts) {
     const postContainer = document.getElementById("display-blog");
-    postContainer.innerHTML = ""; // Clear previous content
+    postContainer.innerHTML = "";
 
     const postElement = document.createElement("div");
     postElement.classList.add("post");
-    postElement.id = `post-${posts.id}`;
 
     postElement.innerHTML = `
         <img src="${posts.image}" alt="${posts.title}" class="post-image">
@@ -47,5 +46,32 @@ function handlePostClick(posts) {
 
     postContainer.appendChild(postElement);
 }
-
 displayPosts();
+
+// Add event listener to the form submission
+// Add a new blog post. Attach a submit event listener to the form with the ID of new-post-form
+
+function addNewPostListener() {
+    const newPostForm = document.getElementById("new-post-form");
+    newPostForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const title = document.getElementById("input-title").value;
+        const author = document.getElementById("input-author").value;
+        const content = document.getElementById("input-content").value;
+        const image = document.getElementById("input-image").value;
+
+        const newPost = {title, author, content, image};
+
+        fetch("http://localhost:3000/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            body:JSON.stringify(newPost)
+        })
+        
+    })
+}
+addNewPostListener();
