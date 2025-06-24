@@ -36,11 +36,18 @@
       "image": "https://www.themealdb.com/images/media/meals/rpvptu1511641092.jpg"
     },
     {
-      "title": "I Put Kimchi in My Grilled Cheese and Regret Nothing",
+      "title": "The One-Pot Pasta That Saved My Weeknights",
       "author": "Maya Smythe",
-      "content": "Tangy, spicy kimchi + melted cheese = the combo you didn’t know you needed. The funkiness of the kimchi cuts through the richness of the cheese perfectly. Toasted golden on the outside, gooey goodness on the inside. It’s now my rainy day comfort food.",
-      "image": "https://images.unsplash.com/photo-1599785209707-28e19cf20fc2?auto=format&fit=crop&w=600&q=80",
+      "content": "Minimal cleanup, maximum flavor. This tomato-basil one-pot pasta comes together in under 20 minutes. Just toss everything into one pan — pasta, broth, tomatoes, garlic, and herbs — and let the magic happen.",
+      "image": "https://img.freepik.com/free-photo/pasta-with-tomato-sauce-with-vegetables_1220-5304.jpg?uid=R202261631&semt=ais_items_boosted&w=740",
       "id": 6
+    },
+    {
+      "title": "Mango Lassi Overnight Oats (Yes, It Works!)",
+      "author": "Nina Sharma",
+      "content": "I blended mango pulp, yogurt, cardamom, and a touch of honey into my oats. The result? A creamy, tangy, tropical breakfast that feels like a hug in a bowl. Bonus: it’s prepped the night before so you can hit snooze guilt-free.",
+      "image": "https://img.freepik.com/free-photo/fresh-mango-smoothie_1339-1486.jpg?uid=R202261631&semt=ais_items_boosted&w=740",
+      "id": 7
     }
   ]
 }

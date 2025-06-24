@@ -71,6 +71,15 @@ function addNewPostListener() {
             },
             body:JSON.stringify(newPost)
         })
+        .then(res => res.json())
+        .then(addedPost => {
+        posts.push(addedPost);
+        displayTitles(posts);
+        // Load the new post details
+        handlePostClick(addedPost);
+        // Reset the form after submission
+        form.reset();
+});
         
     })
 }
