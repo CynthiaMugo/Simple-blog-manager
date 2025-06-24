@@ -1,3 +1,12 @@
+ document.addEventListener("DOMContentLoaded", () => {
+    // Initialize the posts array
+    let posts = [];
+
+    // Fetch and display posts & / Add event listener for new post submission
+    displayPosts();
+    addNewPostListener();
+ })
+
  function displayPosts() {
     fetch("http://localhost:3000/posts")
     .then(response => {
@@ -46,7 +55,7 @@ function handlePostClick(posts) {
 
     postContainer.appendChild(postElement);
 }
-displayPosts();
+
 
 // Add event listener to the form submission
 // Add a new blog post. Attach a submit event listener to the form with the ID of new-post-form
@@ -78,9 +87,8 @@ function addNewPostListener() {
         // Load the new post details
         handlePostClick(addedPost);
         // Reset the form after submission
-        form.reset();
+        newPostForm.reset();
 });
         
     })
 }
-addNewPostListener();
