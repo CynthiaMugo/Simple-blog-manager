@@ -10,6 +10,7 @@ Welcome to the **Simple Blog Manager** – a delightful single-page application 
 - Dynamic Sidebar: Automatically updates with each blog post title.
 - Instant Display: Click a title to view the full blog post.
 - Create Blog Posts: Add a title, author, image, and content using the form.
+- Edit and delete the blog posts
 
 ## Built with
 - **HTML** – Markup structure
@@ -54,7 +55,7 @@ json-server --watch db.json
 
 3. Add a new post using a form and POST it to the API
 
-4. Automatically update UI without refreshing
+4. Edit and delete posts
 
 ## Known Bugs
 There are currently no known bugs.
