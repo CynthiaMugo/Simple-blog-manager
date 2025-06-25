@@ -1,7 +1,5 @@
+ let posts = [];
  document.addEventListener("DOMContentLoaded", () => {
-    // Initialize the posts array
-    let posts = [];
-
     // Fetch and display posts & / Add event listener for new post submission
     displayPosts();
     addNewPostListener();
@@ -58,9 +56,19 @@ function handlePostClick(posts) {
         <p><strong>Author:</strong> ${posts.author}</p>
         <img src="${posts.image}" alt="${posts.title}" class="post-image">
         <p>${posts.content}</p>
+        <button id="edit-button" data-id="${posts.id}">Edit</button>
+        <button id="delete-button" data-id="${posts.id}">Delete</button>
     `;
 
     postContainer.appendChild(postElement);
+    const deleteButton = document.getElementById("delete-button");
+    deleteButton.addEventListener("click", () => {
+        deletePost(posts.id);
+    });
+    const editButton = document.getElementById("edit-button");
+    editButton.addEventListener("click", () => {
+        editPost(posts);
+    })
 }
 
 
@@ -103,6 +111,60 @@ function addNewPostListener() {
 // Update the number of posts displayed
 function updatePostCount(posts) {
     const postCountElement = document.getElementById("num-blogs");
-    console.log(postCountElement);
+    //console.log(postCountElement);
     postCountElement.textContent = `${posts.length} posts`;
+}
+
+// Delete a post by clicking the delete button
+function deletePost(postId) {
+    fetch(`http://localhost:3000/posts/${postId}`, {
+    method: "DELETE"
+  })
+    .then(() => {
+      // Remove from local array
+      posts = posts.filter(post => post.id !== postId);
+      displayTitles(posts);
+      updatePostCount(posts);
+      document.getElementById("display-blog").innerHTML = "";
+    })
+    .catch(error => {
+      console.error("Error deleting post:", error);
+    });
+}
+
+// Edit a post by clicking the edit button - chosen to use prompt
+function editPost(post) {
+    const newTitle = prompt("Edit Title:", post.title);
+    const newContent = prompt("Edit Content:", post.content);
+    const newAuthor = prompt("Edit Author:", post.author);
+    const newImage = prompt("Edit Image URL:", post.image);
+
+    if (newTitle && newContent && newAuthor && newImage) {
+        const updatedPost = {
+      title: newTitle,
+      content: newContent,
+      author: newAuthor,
+      image: newImage
+    };
+
+    fetch(`http://localhost:3000/posts/${post.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(updatedPost)
+    })
+    .then(res => res.json())
+    .then(updated => {
+      const index = posts.findIndex(p => p.id === post.id);
+      posts[index] = updated;
+
+      displayTitles(posts);
+      handlePostClick(updated);
+    })
+    .catch(error => {
+      console.error("Error updating post:", error);
+    });
+    }
 }
