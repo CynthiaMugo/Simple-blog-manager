@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "This Spicy Mango Salsa Changed My Taco Nights Forever",
+      "content": "This salsa is a vibrant fusion of sweet mangoes and fiery chilies. It/’s my go-to recipe for summer gatherings. The freshness of lime juice and the crunch of red onions make it an absolute crowd-pleaser. Serve it with chips or spoon it over grilled chicken for a tangy twist that wakes up your taste buds.",
+      "author": "Cynthia Mugo",
+      "image": "https://www.themealdb.com/images/media/meals/uwxqwy1483389553.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Garlic Butter Shrimp in 15 Minutes (You're Welcome)",
+      "content": "Quick, easy, and luxurious. This garlic butter shrimp dish tastes like something you’d order at a fancy seafood place, but it only takes 15 minutes. I usually serve it over pasta or alongside crusty bread to soak up that rich buttery sauce. The smell alone is worth making it at least once a week.",
+      "author": "Valentine Nduta",
+      "image": "https://www.themealdb.com/images/media/meals/1525873040.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Avocado Toast, But Make It Elite",
+      "content": "I know, avocado toast is everywhere, but this remix is the truth. Creamy avocado seasoned with lime, topped with poached eggs, chili flakes, and a dash of sesame oil. It’s quick to make and packed with flavor. The perfect breakfast when you want something fancy but don’t want to dirty too many dishes.",
+      "author": "Hector Miano",
+      "image": "https://www.themealdb.com/images/media/meals/yypwwq1511304979.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Bibimbap Bowl That Feels Like a Warm Hug",
+      "content": "Bibimbap is more than just a meal — it’s a warm hug in a bowl. Rice, sautéed vegetables, spiced beef, and a fried egg on top. Drizzle some gochujang sauce and stir it all together — it’s color, texture, and comfort in every bite. My version stays true to the soul of the dish, but adds some extra crunch with toasted sesame seeds.",
+      "author": "Erickson Gikonyo",
+      "image": "https://www.themealdb.com/images/media/meals/xz8f6x1600461103.jpg"
+    },
+    {
+      "id": 5,
+      "title": "No-Bake Chocolate Tart: The Dessert That Outsmarts Your Oven",
+      "content": "This dessert is dangerously easy and unapologetically decadent. A buttery biscuit base layered with silky, dark chocolate ganache. No oven required, just patience while it chills. I top mine with flaky sea salt and raspberries for a bougie finish. Perfect for impressing guests — or just treating yourself on a Tuesday.",
+      "author": "Collins Joash",
+      "image": "https://www.themealdb.com/images/media/meals/rpvptu1511641092.jpg"
+    },
+    {
+      "title": "The One-Pot Pasta That Saved My Weeknights",
+      "author": "Maya Smythe",
+      "content": "Minimal cleanup, maximum flavor. This tomato-basil one-pot pasta comes together in under 20 minutes. Just toss everything into one pan — pasta, broth, tomatoes, garlic, and herbs — and let the magic happen.",
+      "image": "https://img.freepik.com/free-photo/pasta-with-tomato-sauce-with-vegetables_1220-5304.jpg?uid=R202261631&semt=ais_items_boosted&w=740",
+      "id": 6
+    },
+    {
+      "title": "Coconut Chicken Curry So Good It Might Propose to You",
+      "author": "Tony Armando",
+      "content": "Creamy coconut milk, tender chicken, and a medley of spices come together in a pot of pure love. This curry has just enough heat to flirt without burning bridges. Serve over rice, naan, or straight from the ladle. I don't judge.",
+      "image": "https://img.freepik.com/free-photo/green-curry-made-with-chicken-chili-basil-with-tomato-lime-kaffir-lime-leaves-garlic_1150-25724.jpg?uid=R195694176&ga=GA1.1.1131489315.1748438663&semt=ais_items_boosted&w=740",
+      "id": 7
+    }
+  ]
+}
